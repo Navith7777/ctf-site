@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Button from '../components/Button.jsx';
 import { FaHandPaper, FaThumbsUp, FaTrophy, FaDollarSign } from 'react-icons/fa';
-const WhyFunding = () => {
+const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
 
   const handleCopy = () => {
@@ -11,7 +11,7 @@ const WhyFunding = () => {
   };
 
   return (
-    <section className="bg-black  text-white py-20 px-4 sm:px-12">
+    <section className="bg-black  text-white py-20 px-4 sm:px-12" id='termsofuse'>
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl font-bold mb-12">Why competition Trader Funding?</h2>
 
@@ -50,4 +50,4 @@ const WhyFunding = () => {
   );
 };
 
-export default WhyFunding;
+export default About;
