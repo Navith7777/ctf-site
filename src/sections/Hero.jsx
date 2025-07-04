@@ -1,64 +1,65 @@
-import { Leva } from 'leva';
-import { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
 import { useMediaQuery } from 'react-responsive';
-import { PerspectiveCamera } from '@react-three/drei';
-
-import Cube from '../components/Cube.jsx';
-import Rings from '../components/Rings.jsx';
-import ReactLogo from '../components/ReactLogo.jsx';
-import Button from '../components/Button.jsx';
-import Target from '../components/Target.jsx';
-import CanvasLoader from '../components/Loading.jsx';
-import HeroCamera from '../components/HeroCamera.jsx';
+import Globe from 'react-globe.gl';
 import { calculateSizes } from '../constants/index.js';
-import { HackerRoom } from '../components/HackerRoom.jsx';
 
 const Hero = () => {
-  // Use media queries to determine screen size
   const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
-
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
   return (
-    <section className="min-h-screen w-full flex flex-col relative" id="home">
-      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
-        <p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans">
-          Hi, I am Navith <span className="waving-hand">👋</span>
-        </p>
-        <p className="hero_tag text-gray_gradient">Building websites & Applications</p>
-      </div>
+    <section
+      className="pt-32 sm:pt-40 pb-20 w-full flex flex-col justify-center items-center bg-gradient-to-b from-black via-[#0d0d0d] to-[#1a1a1a] text-white relative px-4 sm:px-12"
+      id="home"
+    >
+      <div className="flex flex-col sm:flex-row items-center justify-between w-full max-w-7xl gap-12 sm:gap-20">
+        {/* Left Globe */}
+        <div className="flex-shrink-0">
+          <Globe
+            height={320}
+            width={320}
+            backgroundColor="rgba(0, 0, 0, 0)"
+            backgroundImageOpacity={0.5}
+            showAtmosphere
+            showGraticules
+            globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+            bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
+            labelsData={[
+              { lat: 40, lng: -100, text: 'Rijeka, Croatia', color: 'white', size: 15 },
+            ]}
+          />
+        </div>
 
-      <div className="w-full h-full absolute inset-0">
-        <Canvas className="w-full h-full">
-          <Suspense fallback={<CanvasLoader />}>
-            {/* To hide controller */}
-            <Leva hidden />
-            <PerspectiveCamera makeDefault position={[0, 0, 30]} />
+        {/* Right Text Section */}
+        <div className="text-center sm:text-left max-w-2xl">
+          <p className="text-md sm:text-lg text-gray-300 font-medium mb-2">
+            <span className="text-white font-semibold">🚀 Hiring On The </span>
+            <span className="text-green-400 font-semibold">Go</span>
+          </p>
 
-            <HeroCamera isMobile={isMobile}>
-              <HackerRoom scale={sizes.deskScale} position={sizes.deskPosition} rotation={[0.1, -Math.PI, 0]} />
-            </HeroCamera>
+          <h1 className="text-4xl sm:text-6xl font-bold leading-tight">
+            Hiring Of <br />
+            <span className="text-green-400">Continue Profitable</span> <br />
+            <span className="text-white">Traders!</span>
+          </h1>
 
-            <group>
-              <Target position={sizes.targetPosition} />
-              <ReactLogo position={sizes.reactLogoPosition} />
-              <Rings position={sizes.ringPosition} />
-              <Cube position={sizes.cubePosition} />
-            </group>
+          <p className="mt-4 text-md sm:text-lg text-gray-400">
+            1,000,000 traders in the world’s leading firm.
+          </p>
+          <p className="mt-2 text-md sm:text-lg text-gray-400">
+            Trade in a fully simulated environment and earn up to 100% rewards.
+          </p>
 
-            <ambientLight intensity={1} />
-            <directionalLight position={[10, 10, 10]} intensity={0.5} />
-          </Suspense>
-        </Canvas>
-      </div>
-
-      <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
-        <a href="#about" className="w-fit">
-          <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
-        </a>
+          <div className="flex flex-wrap sm:justify-start justify-center gap-4 mt-8">
+            <button className="bg-lime-400 hover:bg-lime-500 text-black font-semibold py-2 px-6 rounded-md transition-all">
+              Buy Challenge
+            </button>
+            <button className="border border-lime-400 text-lime-400 hover:bg-lime-500 hover:text-black font-semibold py-2 px-6 rounded-md transition-all">
+              Join Competition
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );
