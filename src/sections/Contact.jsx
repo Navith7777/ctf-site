@@ -101,7 +101,7 @@ const CardSlider = () => {
         {teamMembers.map((member, idx) => (
           <div
             key={idx}
-            className="bg-white rounded-xl shadow-lg text-center px-4 py-6 min-w-[85%] max-w-[85%] flex-shrink-0"
+            className="bg-black rounded-xl shadow-lg text-center px-4 py-6 min-w-[85%] max-w-[85%] flex-shrink-0"
           >
             <h3 className="text-lg font-semibold mb-1">{member.role}</h3>
             <p className="text-purple-600 mb-2 font-medium">{member.name}</p>
