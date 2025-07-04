@@ -1,4 +1,3 @@
-import { FaDiscord, FaHeadset, FaPaperPlane } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -7,7 +6,6 @@ const Footer = () => {
         {/* Our Community */}
         <div className="bg-blue-900 rounded-xl p-6">
           <div className="flex items-center gap-2 text-lg font-semibold mb-2">
-            <FaDiscord className="text-2xl" />
             <span>Our Community</span>
           </div>
           <h3 className="text-xl font-semibold mb-2">Do not skip any beat.</h3>
@@ -22,7 +20,6 @@ const Footer = () => {
         {/* Customer Support */}
         <div className="bg-blue-900 rounded-xl p-6">
           <div className="flex items-center gap-2 text-lg font-semibold mb-2">
-            <FaHeadset className="text-2xl" />
             <span>Customer Support</span>
           </div>
           <h3 className="text-xl font-semibold mb-2">24/7 Customer Support</h3>
@@ -42,7 +39,6 @@ const Footer = () => {
         {/* Newsletter */}
         <div className="bg-blue-900 rounded-xl p-6">
           <div className="flex items-center gap-2 text-lg font-semibold mb-2">
-            <FaPaperPlane className="text-2xl" />
             <span>Newsletter</span>
           </div>
           <h3 className="text-xl font-semibold mb-1">Join our Newsletter</h3>
