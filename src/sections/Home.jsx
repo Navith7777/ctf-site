@@ -52,12 +52,14 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-wrap sm:justify-start justify-center gap-4 mt-8">
-            <button className="bg-lime-400 hover:bg-lime-500 text-black font-semibold py-2 px-6 rounded-md transition-all">
-              Buy Challenge
-            </button>
-            <button className="border border-lime-400 text-lime-400 hover:bg-lime-500 hover:text-black font-semibold py-2 px-6 rounded-md transition-all">
-              Join Competition
-            </button>
+<button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-md transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
+  Buy Challenge
+</button>
+<button className="border border-blue-500 text-blue-500 hover:bg-blue-600 hover:text-white font-semibold py-2 px-6 rounded-md transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
+  Join Competition
+</button>
+
+
           </div>
         </div>
       </div>
