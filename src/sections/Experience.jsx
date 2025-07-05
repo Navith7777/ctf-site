@@ -5,8 +5,8 @@ const Experience = () => {
   const [selectedProduct, setSelectedProduct] = useState('FundingPips');
   const [selectedAccountSize, setSelectedAccountSize] = useState('$100K');
 
-  const steps = ['Zero', '1 step', '2 step'];
-  const products = ['FundingPips', 'FundingPips Pro'];
+  const steps = ['CTF 1', 'CTF 2', 'CTF 3', 'CTF 4',];
+  const products = ['Meta Trader 4', 'Meta Trader 5'];
   const accountSizes = ['$5K', '$10K', '$25K', '$50K', '$100K'];
 
   return (
