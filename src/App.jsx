@@ -4,7 +4,7 @@ import Termsofuse from './sections/Termofuse.jsx';
 import Footer from './sections/Footer.jsx';
 import Contact from './sections/Contact.jsx';
 import Projects from './sections/Projects.jsx';
-import WorkExperience from './sections/Experience.jsx';
+import AffiliateProgram from './sections/AffiliateProgram.jsx';
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
       <Navbar />
       <Home />
       <Termsofuse />
-      <WorkExperience />
+      <AffiliateProgram />
       <Projects />
       <Contact />
       <Footer />

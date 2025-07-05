@@ -11,13 +11,13 @@ export const navLinks = [
   },
   {
     id: 3,
-    name: 'About us',
-    href: '#about',
+    name: 'Affiliate Program',
+    href: '#affiliateProgram',
   },
   {
     id: 4,
-    name: 'Affiliate Program',
-    href: '#affiliateProgram',
+    name: 'About us',
+    href: '#about',
   },
    {
     id: 5,
