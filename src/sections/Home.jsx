@@ -16,23 +16,19 @@ const Hero = () => {
       <div className="flex flex-col sm:flex-row items-center justify-between w-full max-w-7xl gap-12 sm:gap-20">
         {/* Left Globe */}
         <div className="flex-shrink-0">
-           <Globe
-        width={360}
-        height={360}
-        globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-        bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
-        showAtmosphere
-        showGraticules
-        backgroundColor="rgba(0,0,0,0)"
-        labelsData={[
-          { lat: 37.7749, lng: -122.4194, text: 'Coinbase HQ', color: '#f7931a', size: 2 },
-          { lat: 25.2048, lng: 55.2708, text: 'Binance Dubai', color: '#f0b90b', size: 2 },
-          { lat: 52.52, lng: 13.405, text: 'Berlin Node', color: '#ffffff', size: 1.5 },
-        ]}
-        labelSize={(d) => d.size}
-        labelColor={(d) => d.color}
-        labelText={(d) => d.text}
-      />
+          <Globe
+            height={320}
+            width={320}
+            backgroundColor="rgba(0, 0, 0, 0)"
+            backgroundImageOpacity={0.5}
+            showAtmosphere
+            showGraticules
+            globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+            bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
+            labelsData={[
+              { lat: 40, lng: -100, text: '', color: 'white', size: 15 },
+            ]}
+          />
         </div>
 
         {/* Right Text Section */}

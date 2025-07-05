@@ -53,7 +53,7 @@ const teamMembers = [
   },
 ];
 
-const CardSlider = () => {
+const Contact = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const visibleCards = 5;
 
@@ -71,7 +71,7 @@ const CardSlider = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-7xl mx-auto overflow-hidden py-12">
+    <div className="w-full max-w-7xl mx-auto overflow-hidden py-12" id="contact">
       {/* Desktop Auto Sliding */}
       <div className="hidden md:flex transition-transform duration-[2000ms] ease-in-out gap-6"
         style={{
@@ -118,4 +118,4 @@ const CardSlider = () => {
   );
 };
 
-export default CardSlider;
+export default Contact;

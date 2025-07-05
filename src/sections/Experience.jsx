@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const CTFCompetition = () => {
+const Experience = () => {
   const [selectedStep, setSelectedStep] = useState('2 step');
   const [selectedProduct, setSelectedProduct] = useState('FundingPips');
   const [selectedAccountSize, setSelectedAccountSize] = useState('$100K');
@@ -156,4 +156,4 @@ const CTFCompetition = () => {
   );
 };
 
-export default CTFCompetition;
+export default Experience;
