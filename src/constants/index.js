@@ -24,6 +24,11 @@ export const navLinks = [
     name: 'FAQ',
     href: '#faq',
   },
+     {
+    id: 5,
+    name: 'History',
+    href: '#history',
+  },
 ];
 
 export const clientReviews = [
