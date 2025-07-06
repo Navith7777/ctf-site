@@ -1,4 +1,5 @@
 import React from "react";
+import { navLinks } from '../constants/index.js';
 
 const paymentData = [
   {

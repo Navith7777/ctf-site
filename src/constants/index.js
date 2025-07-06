@@ -25,7 +25,7 @@ export const navLinks = [
     href: '#faq',
   },
      {
-    id: 5,
+    id: 6,
     name: 'History',
     href: '#history',
   },
