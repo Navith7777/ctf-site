@@ -449,7 +449,7 @@ const Experience = () => {
     <section className="bg-[#05004D] text-white min-h-screen py-10 px-4 flex flex-col items-center rounded-xl">
       <h2 className="text-4xl font-bold text-center mb-4">Buckle Up, Your Journey Starts Here!</h2>
       <p className="text-center text-lg text-gray-300 max-w-2xl mb-8">
-        We evaluate according to objectives that best fit your style. From beginners to experts, traders from 195+
+        We evaluate accordi to objectives that best fit your style. From beginners to experts, traders from 195+
         countries trust our platform.
       </p>
 
