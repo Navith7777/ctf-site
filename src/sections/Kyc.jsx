@@ -219,7 +219,7 @@ const Kyc = () => {
                 </a>
                 .
               </p>
-              <p>All information provided is correct and matches government-issued ID.</p>
+              <p>All information provied is correct and matches government-issued ID.</p>
               <p>
                 I have read and agree with the{' '}
                 <a href="#" className="text-blue-600 underline">
