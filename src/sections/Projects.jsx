@@ -38,13 +38,13 @@ const Projects = () => {
       <div className="flex justify-center gap-5 my-10">
         <button
           onClick={() => handleNavigation('previous')}
-          className="px-4 py-2 bg-black-500 text-white rounded hover:bg-black-700"
+          className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-md transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
         >
           Previous
         </button>
         <button
           onClick={() => handleNavigation('next')}
-          className="px-4 py-2 bg-black-500 text-white rounded hover:bg-black-700"
+          className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-6 rounded-md transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
         >
           Next
         </button>

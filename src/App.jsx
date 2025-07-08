@@ -8,6 +8,7 @@ import Contact from './sections/Contact.jsx';
 import Projects from './sections/Projects.jsx';
 import AffiliateProgram from './sections/AffiliateProgram.jsx';
 import ResetPassword from './sections/ResetPassword.jsx';
+import ChallengeForm from './sections/Kyc.jsx';
 
 const App = () => {
   return (
@@ -22,14 +23,17 @@ const App = () => {
               <Termsofuse />
               <AffiliateProgram />
               <Projects />
-              <Contact />
+              {/* <Contact /> */}
               <Footer />
             </main>
           }
         />
         <Route path="/reset-password" element={<ResetPassword />} />
+                <Route path="/kyc" element={<ChallengeForm />} />
+
       </Routes>
     </>
+
   );
 };
 

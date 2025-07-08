@@ -104,9 +104,9 @@ export const myProjects = [
     ],
   },
   {
-    title: 'LiveDoc - Real-Time Google Docs Clone',
-    desc: 'LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.',
-    subdesc:
+     title: 'FXVision - AI Forex Trading Assistant',
+  desc: 'FXVision is an AI-based Forex assistant that helps traders by analyzing price trends, economic indicators, and market movements in real time. It improves trading decisions using intelligent insights, reducing emotion-driven trades and enhancing profitability for all experience levels.',
+  subdesc:
       'With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.',
     href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
     texture: '/textures/project/project2.mp4',
@@ -141,9 +141,9 @@ export const myProjects = [
     ],
   },
   {
-    title: 'CarePulse - Health Management System',
-    desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
-    subdesc:
+   title: 'TradeTrackr - Forex Trade Analytics System',
+  desc: 'TradeTrackr is a smart trade analysis app designed for Forex traders. It visualizes trading performance, win/loss ratios, and emotional patterns. Track your growth, refine strategies, and optimize performance through detailed, easy-to-understand reports and dynamic trading behavior charts.',
+  subdesc:
       'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
     href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
     texture: '/textures/project/project3.mp4',
@@ -180,9 +180,9 @@ export const myProjects = [
     ],
   },
   {
-    title: 'Horizon - Online Banking Platform',
-    desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
-    subdesc:
+    title: 'PipMaster - Forex Simulator & Strategy Builder',
+  desc: 'PipMaster helps Forex traders test and refine strategies in a risk-free environment. With historical data, real-time simulation, and smart charting tools, traders can improve accuracy, timing, and confidence before risking real capital in the live market environment.',
+  subdesc:
       'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
     href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
     texture: '/textures/project/project4.mp4',
@@ -217,9 +217,9 @@ export const myProjects = [
     ],
   },
   {
-    title: 'Imaginify - AI Photo Manipulation App',
-    desc: 'Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.',
-    subdesc:
+   title: 'TradeVault - Portfolio and Risk Manager',
+  desc: 'TradeVault is a portfolio management system that tracks all Forex positions, open trades, and drawdowns. It helps manage risk by monitoring exposure, leveraging alerts, and ensuring traders maintain a balanced, low-risk trading environment with reliable reporting tools.',
+  subdesc:
       'Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.',
     href: 'https://www.youtube.com/watch?v=Ahwoks_dawU',
     texture: '/textures/project/project5.mp4',
@@ -325,9 +325,9 @@ export const myProjects1 = [
     ],
   },
   {
-    title: 'CarePulse - Health Management System',
-    desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
-    subdesc:
+   title: 'ChartFlow - Live Forex Charting App',
+  desc: 'ChartFlow delivers live, interactive Forex charts with advanced drawing tools and multi-timeframe views. Traders can annotate setups, apply indicators, and share chart snapshots, making technical analysis more engaging and collaborative for both beginner and professional currency traders worldwide.',
+  subdesc:
       'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
     href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
     texture: '/textures/project/project3.mp4',
@@ -364,9 +364,9 @@ export const myProjects1 = [
     ],
   },
   {
-    title: 'Horizon - Online Banking Platform',
-    desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
-    subdesc:
+     title: 'SentimentX - Forex Market Sentiment Tracker',
+  desc: 'SentimentX analyzes retail trader positioning and news sentiment to help Forex traders understand crowd psychology. With heatmaps and dynamic scorecards, users get real-time updates on bullish or bearish sentiment across currency pairs, improving overall decision-making and timing accuracy.',
+  subdesc:
       'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
     href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
     texture: '/textures/project/project4.mp4',
@@ -401,9 +401,9 @@ export const myProjects1 = [
     ],
   },
   {
-    title: 'Imaginify - AI Photo Manipulation App',
-    desc: 'Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.',
-    subdesc:
+     title: 'AutoPip - Forex Bot Strategy Launcher',
+  desc: 'AutoPip allows traders to launch and monitor automated Forex bots using customizable logic, timeframes, and money management. Users can optimize and test strategies before going live, ensuring maximum control and flexibility over their trading automation without writing code manually.',
+  subdesc:
       'Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.',
     href: 'https://www.youtube.com/watch?v=Ahwoks_dawU',
     texture: '/textures/project/project5.mp4',
