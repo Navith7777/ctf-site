@@ -1,12 +1,45 @@
 import { useMediaQuery } from 'react-responsive';
 import Globe from 'react-globe.gl';
 import { calculateSizes } from '../constants/index.js';
+import { useNavigate } from 'react-router-dom';
+import { onAuthStateChanged } from 'firebase/auth';
+import { useEffect, useState } from 'react';
+import { auth } from '../lib/firebase.js';
 
 const Hero = () => {
+  const navigate = useNavigate();
+  const [currentUser, setCurrentUser] = useState(null);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+
   const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setCurrentUser(user);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  const handleBuyChallenge = () => {
+    if (currentUser) {
+      navigate('/kyc');
+    } else {
+      setShowLoginModal(true);
+    }
+  };
+
+  const handleCloseModal = () => {
+    setShowLoginModal(false);
+  };
+
+  const handleLoginNavigate = () => {
+    setShowLoginModal(false);
+    navigate('/');
+  };
 
   return (
     <section
@@ -14,7 +47,6 @@ const Hero = () => {
       id="home"
     >
       <div className="flex flex-col sm:flex-row items-center justify-between w-full max-w-7xl gap-12 sm:gap-20">
-        {/* Left Globe */}
         <div className="flex-shrink-0">
           <Globe
             height={320}
@@ -31,7 +63,6 @@ const Hero = () => {
           />
         </div>
 
-        {/* Right Text Section */}
         <div className="text-center sm:text-left max-w-2xl">
           <p className="text-md sm:text-lg text-gray-300 font-medium mb-2">
             <span className="text-white font-semibold">🚀 Hiring On The </span>
@@ -52,17 +83,46 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-wrap sm:justify-start justify-center gap-4 mt-8">
-<button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-md transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
-  Buy Challenge
-</button>
-<button className="border border-blue-500 text-blue-500 hover:bg-blue-600 hover:text-white font-semibold py-2 px-6 rounded-md transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
-  Join Competition
-</button>
+            <button
+              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-md transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+              onClick={handleBuyChallenge}
+            >
+              Buy Challenge
+            </button>
 
-
+            <button className="border border-blue-500 text-blue-500 hover:bg-blue-600 hover:text-white font-semibold py-2 px-6 rounded-md transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
+              Join Competition
+            </button>
           </div>
         </div>
       </div>
+
+      {showLoginModal && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/60 backdrop-blur-sm px-4 py-6">
+          <div className="w-full max-w-lg min-h-[380px] bg-[#111827]/90 text-white backdrop-blur-xl p-10 rounded-3xl shadow-2xl border border-gray-700 text-center relative">
+
+            <img
+              src="/assets/user.png"
+              alt="Login Required"
+              className="w-16 h-16 mx-auto mb-6"
+            />
+
+            <h2 className="text-2xl font-semibold mb-3">Please Login</h2>
+
+            <p className="text-base mb-8 text-gray-300">You need to login to continue.</p>
+
+            <div className="flex justify-center">
+              <button
+                onClick={handleCloseModal}
+                className="px-6 py-2 border border-gray-400 rounded-md bg-white text-black hover:bg-gray-100 transition"
+              >
+                Ok
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
     </section>
   );
 };

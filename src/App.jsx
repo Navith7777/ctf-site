@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
 import Navbar from './sections/Navbar.jsx';
 import Home from './sections/Home.jsx';
@@ -9,11 +9,18 @@ import Projects from './sections/Projects.jsx';
 import AffiliateProgram from './sections/AffiliateProgram.jsx';
 import ResetPassword from './sections/ResetPassword.jsx';
 import ChallengeForm from './sections/Kyc.jsx';
-
+import History from './sections/History.jsx';
+import CtfSection from './sections/CtfSection.jsx'
 const App = () => {
+  const location = useLocation();
+
+  const hideHeaderFooterRoutes = ['/kyc', '/history'];
+  const hideHeaderFooter = hideHeaderFooterRoutes.includes(location.pathname);
+
   return (
     <>
-      <Navbar />
+      {!hideHeaderFooter && <Navbar />}
+
       <Routes>
         <Route
           path="/"
@@ -24,16 +31,18 @@ const App = () => {
               <AffiliateProgram />
               <Projects />
               {/* <Contact /> */}
+              <CtfSection/>
               <Footer />
             </main>
           }
         />
         <Route path="/reset-password" element={<ResetPassword />} />
-                <Route path="/kyc" element={<ChallengeForm />} />
-
+        <Route path="/kyc" element={<ChallengeForm />} />
+        <Route path="/history" element={<History />} />
       </Routes>
-    </>
 
+      {!hideHeaderFooter && location.pathname !== '/' && <Footer />}
+    </>
   );
 };
 
